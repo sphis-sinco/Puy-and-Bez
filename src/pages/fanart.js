@@ -1,13 +1,18 @@
 var fanarts = [
         {
-                name: "Retis concept",
+                name: ["Retis concept"],
                 author: "Sphis_Sinco",
-                path: "concepts/characters/Retis",
-                width: 300,
+                path: ["concepts/characters/Retis"],
+                width: [300],
         },
 ];
 
-var addFanart = function (title = "", creator = "", location = "", w = 300) {
+var addFanart = function (
+        title = [""],
+        creator = "",
+        location = [""],
+        w = [300]
+) {
         fanarts.push({
                 name: title,
                 author: creator,
@@ -17,13 +22,25 @@ var addFanart = function (title = "", creator = "", location = "", w = 300) {
 };
 
 fanarts = [];
-addFanart("Chibi Boys", "H.R.", "fanart/H.R/chibi");
-addFanart("Gamer Boys", "H.R.", "fanart/H.R/human");
+addFanart(["Chibi Boys", "Gamer Boys"], "H.R.", [
+        "fanart/H.R/chibi",
+        "fanart/H.R/human",
+]);
 
 var list = document.getElementById("fanart-list");
 if (fanarts.length > 0) list.removeChild(document.getElementById("empty"));
 for (let fanart of fanarts) {
-        var fanartstring = fanart.name;
+        var fanartstring = "";
+
+        var i = 0;
+        for (let name in fanart.name) {
+                fanartstring += fanart.name[i];
+
+                if (i + 1 < fanart.name.length) fanartstring += ", ";
+                if (i + 1 == fanart.name.length - 1) fanartstring += " and ";
+
+                i++;
+        }
 
         if (fanart.author != null) fanartstring += " by " + fanart.author;
 
@@ -35,12 +52,20 @@ for (let fanart of fanarts) {
 
         card.appendChild(fanartElement);
 
-        var artwork = document.createElement("img");
-        artwork.src = "../" + fanart.path + ".png";
-        artwork.width = 300;
+        var i = 0;
+        for (let art in fanart.path) {
+                var artwork = document.createElement("img");
+                artwork.src = "../" + fanart.path[i] + ".png";
+                artwork.width = 300;
 
-        if (fanart.width != null) artwork.width = fanart.width;
-        card.appendChild(artwork);
+                if (fanart.width[i] != null) artwork.width = fanart.width[i];
+                card.appendChild(artwork);
+
+                if (i + 1 < fanart.name.length)
+                        card.appendChild(document.createElement("br"));
+
+                i++;
+        }
 
         list.appendChild(card);
 }
