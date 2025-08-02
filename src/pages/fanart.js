@@ -42,9 +42,10 @@ for (let fanart of fanarts) {
         for (let name in fanart.name) {
                 fanartstring += fanart.name[i];
 
-                fanartstring += ' (';
-                if (fanart.dates[i] != null) fanartstring += fanart.dates[i]; else fanartstring += 'unknown date';
-                fanartstring += ')';
+                fanartstring += " (";
+                if (fanart.dates[i] != null) fanartstring += fanart.dates[i];
+                else fanartstring += "unknown date";
+                fanartstring += ")";
 
                 if (i + 1 < fanart.name.length) fanartstring += ", ";
                 if (i + 1 == fanart.name.length - 1) fanartstring += " and ";
