@@ -11,7 +11,7 @@ var addSkit = function (num = 0, rel = ``, href = ``) {
                 number: num,
                 release: rel,
                 link:
-                        `/${href}.html`,
+                        `${href}.html`,
         });
 };
 
