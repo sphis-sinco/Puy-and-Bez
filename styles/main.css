@@ -1,4 +1,11 @@
 /* style.css */
+    
+@media (max-width: px) { /* Applies to screens 600px wide or less */
+    img {
+        width 150px; /* Adjust image width for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
