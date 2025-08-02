@@ -1,5 +1,5 @@
 # Puy and Bez
-Gay Comedy Coob <!-- hehehehehehehehehehehehehehehehehe -->
+Gay Comedy Boob <!-- hehehehehehehehehehehehehehehehehe -->
 
 ## Credits
 Sphis_Sinco
