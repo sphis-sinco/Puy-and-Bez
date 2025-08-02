@@ -4,6 +4,7 @@ var fanarts = [
                 author: "Sphis_Sinco",
                 path: ["concepts/characters/Retis"],
                 width: [300],
+                dates: ["8/1/2025"],
         },
 ];
 
@@ -11,21 +12,26 @@ var addFanart = function (
         title = [""],
         creator = "",
         location = [""],
-        w = [300]
+        w = [300],
+        date = [""]
 ) {
         fanarts.push({
                 name: title,
                 author: creator,
                 path: location,
                 width: w,
+                dates: date,
         });
 };
 
 fanarts = [];
-addFanart(["Chibi Boys", "Gamer Boys"], "H.R.", [
-        "fanart/H.R/chibi",
-        "fanart/H.R/human",
-]);
+addFanart(
+        ["Chibi Boys", "Gamer Boys"],
+        "H.R.",
+        ["fanart/H.R/chibi", "fanart/H.R/human"],
+        [150],
+        ["8/2/2025", "8/2/2025"]
+);
 
 var list = document.getElementById("fanart-list");
 if (fanarts.length > 0) list.removeChild(document.getElementById("empty"));
@@ -35,6 +41,10 @@ for (let fanart of fanarts) {
         var i = 0;
         for (let name in fanart.name) {
                 fanartstring += fanart.name[i];
+
+                fanartstring += ' (';
+                if (fanart.dates[i] != null) fanartstring += fanart.dates[i]; else fanartstring += 'unknown date';
+                fanartstring += ')';
 
                 if (i + 1 < fanart.name.length) fanartstring += ", ";
                 if (i + 1 == fanart.name.length - 1) fanartstring += " and ";
