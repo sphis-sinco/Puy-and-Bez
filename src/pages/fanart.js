@@ -66,7 +66,7 @@ for (let fanart of fanarts) {
         var i = 0;
         for (let art in fanart.path) {
                 var artwork = document.createElement("img");
-                artwork.src = "/assets/" + fanart.path[i] + ".png";
+                artwork.src = "https://sphis-sinco.github.io/Puy-and-Bez/assets/" + fanart.path[i] + ".png";
                 artwork.width = 300;
 
                 if (fanart.width[i] != null) artwork.width = fanart.width[i];
