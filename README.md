@@ -2,6 +2,6 @@
 Gay Comedy Boob <!-- hehehehehehehehehehehehehehehehehe -->
 
 ## Credits
-Sphis_Sinco
-Aurora Animates
-Phoenix
+- Sphis_Sinco
+- Aurora Animates
+- Phoenix
