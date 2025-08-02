@@ -1,56 +1,56 @@
 var skits = [
         {
                 number: 1,
-                release: `8/1/2025`,
-                link: `pages/skit1.html`,
+                release: "8/1/2025",
+                link: "pages/skit1.html",
         },
 ];
 
-var addSkit = function (num = 0, rel = ``, href = ``) {
+var addSkit = function (num = 0, rel = "", href = "") {
         skits.push({
                 number: num,
                 release: rel,
-                link: `/${href}`,
+                link: href,
         });
 };
 
 skits = [];
-addSkit(1, `8/1/2025`, `pages/skits/skit1.html`);
-addSkit(2, `8/2/2025`, `pages/skits/skit2.html`);
-addSkit(3, null /* `8/2/2025` */, `pages/skits/skit3.html`);
-addSkit(4, null, `pages/skits/skit4.html`);
-addSkit(5, null, `pages/skits/skit5.html`);
-addSkit(6, null, `pages/skits/skit6.html`);
+addSkit(1, "8/1/2025", "pages/skits/skit1.html");
+addSkit(2, "8/2/2025", "pages/skits/skit2.html");
+addSkit(3, null, "pages/skits/skit3.html");
+addSkit(4, null, "pages/skits/skit4.html");
+addSkit(5, null, "pages/skits/skit5.html");
+addSkit(6, null, "pages/skits/skit6.html");
 
-var list = document.getElementById(`book-list`);
-var otherPages = document.getElementById(`page-list`);
+var list = document.getElementById("book-list");
+var otherPages = document.getElementById("page-list");
 
-var linkButton = document.createElement(`a`);
-linkButton.innerHTML = `Fanart`;
-linkButton.className = `book-card`;
-linkButton.href = `pages/fanart.html`;
+var linkButton = document.createElement("a");
+linkButton.innerHTML = "Fanart";
+linkButton.className = "book-card";
+linkButton.href = "pages/fanart.html";
 otherPages.appendChild(linkButton);
 
 for (let skit of skits) {
-        var skitString = `Skit ${skit.number}`;
+        var skitString = "Skit " + skit.number;
 
-        var card = document.createElement(`li`);
-        card.className = `book-card`;
+        var card = document.createElement("li");
+        card.className = "book-card";
 
-        var skitElement = document.createElement(`h4`);
+        var skitElement = document.createElement("h4");
         skitElement.innerHTML = skitString;
 
         if (skit.release != null) {
-                skitElement.innerHTML += ` (${skit.release})`;
+                skitElement.innerHTML += " (" + skit.release + ")";
         }
         card.appendChild(skitElement);
 
         if (skit.release == null) {
-                var linkButton = document.createElement(`button`);
-                linkButton.innerHTML = `Coming Eventually`;
+                var linkButton = document.createElement("button");
+                linkButton.innerHTML = "Coming Eventually";
         } else {
-                var linkButton = document.createElement(`a`);
-                linkButton.innerHTML = `Go to ${skitString}`;
+                var linkButton = document.createElement("a");
+                linkButton.innerHTML = "Go to " + skitString;
                 linkButton.href = skit.link;
         }
         card.appendChild(linkButton);
