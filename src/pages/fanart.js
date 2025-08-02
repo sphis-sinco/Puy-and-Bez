@@ -2,7 +2,7 @@ var fanarts = [
         {
                 name: "Retis concept",
                 author: "Sphis_Sinco",
-                path: "concepts/characters/Retis.png",
+                path: "concepts/characters/Retis",
                 width: 300,
         },
 ];
@@ -17,31 +17,30 @@ var addFanart = function (title = "", creator = "", location = "", w = 300) {
 };
 
 fanarts = [];
+addFanart("Chibi Boys", "H.R.", "fanart/H.R/chibi");
+addFanart("Gamer Boys", "H.R.", "fanart/H.R/human");
 
 var list = document.getElementById("fanart-list");
 if (fanarts.length > 0) list.removeChild(document.getElementById("empty"));
-else {
-        for (let fanart of fanarts) {
-                var fanartstring = fanart.name;
+for (let fanart of fanarts) {
+        var fanartstring = fanart.name;
 
-                if (fanart.author != null)
-                        fanartstring += " by " + fanart.author;
+        if (fanart.author != null) fanartstring += " by " + fanart.author;
 
-                var card = document.createElement("li");
-                card.className = "book-card";
+        var card = document.createElement("li");
+        card.className = "book-card";
 
-                var fanartElement = document.createElement("h4");
-                fanartElement.innerHTML = fanartstring;
+        var fanartElement = document.createElement("h4");
+        fanartElement.innerHTML = fanartstring;
 
-                card.appendChild(fanartElement);
+        card.appendChild(fanartElement);
 
-                var artwork = document.createElement("img");
-                artwork.src = "../" + fanart.path;
-                artwork.width = 300;
+        var artwork = document.createElement("img");
+        artwork.src = "../" + fanart.path + ".png";
+        artwork.width = 300;
 
-                if (fanart.width != null) artwork.width = fanart.width;
-                card.appendChild(artwork);
+        if (fanart.width != null) artwork.width = fanart.width;
+        card.appendChild(artwork);
 
-                list.appendChild(card);
-        }
+        list.appendChild(card);
 }
