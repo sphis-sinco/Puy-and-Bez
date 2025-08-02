@@ -10,7 +10,7 @@ var addSkit = function (num = 0, rel = ``, href = ``) {
         skits.push({
                 number: num,
                 release: rel,
-                link: href,
+                link: `Puy-and-Bez/${href}`,
         });
 };
 
