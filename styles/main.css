@@ -2,7 +2,7 @@
     
 @media (max-width: 720px) { /* Applies to screens _px wide or less */
     img {
-        width 150px; /* Adjust image width for smaller screens */
+        width: 150px; /* Adjust image width for smaller screens */
         margin: 0 auto; /* Center the image */
     }
 }
