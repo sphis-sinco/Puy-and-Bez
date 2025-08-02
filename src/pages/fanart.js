@@ -26,11 +26,11 @@ var addFanart = function (
 
 fanarts = [];
 addFanart(
-        [`Chibi Boys`, `Gamer Boys`],
+        [`Chibi Boys`, `Gamer Boys`, `Freewill`],
         `H.R.`,
-        [`fanart/H.R/chibi`, `fanart/H.R/human`],
+        [`fanart/H.R/chibi`, `fanart/H.R/human`, `fanart/H.R/freewill`],
         [150],
-        [`8/2/2025`, `8/2/2025`]
+        [`8/2/2025`, `8/2/2025`, `8/2/2025`]
 );
 
 var list = document.getElementById(`fanart-list`);
