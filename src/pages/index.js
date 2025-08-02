@@ -16,7 +16,7 @@ var addSkit = function (num = 0, rel = "", href = "") {
 
 skits = [];
 addSkit(1, "8/1/2025", "pages/skits/skit1.html");
-addSkit(2, null, "pages/skits/skit2.html");
+addSkit(2, "8/2/2025", "pages/skits/skit2.html");
 addSkit(3, null, "pages/skits/skit3.html");
 addSkit(4, null, "pages/skits/skit4.html");
 addSkit(5, null, "pages/skits/skit5.html");
