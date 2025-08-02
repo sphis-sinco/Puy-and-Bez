@@ -10,18 +10,17 @@ var addSkit = function (num = 0, rel = ``, href = ``) {
         skits.push({
                 number: num,
                 release: rel,
-                link:
-                        `${href}.html`,
+                link: `${href}`,
         });
 };
 
 skits = [];
-addSkit(1, `8/1/2025`, `pages/skits/skit1`);
-addSkit(2, `8/2/2025`, `pages/skits/skit2`);
-addSkit(3, null /* `8/2/2025` */, `pages/skits/skit3`);
-addSkit(4, null, `pages/skits/skit4`);
-addSkit(5, null, `pages/skits/skit5`);
-addSkit(6, null, `pages/skits/skit6`);
+addSkit(1, `8/1/2025`, `pages/skits/skit1.html`);
+addSkit(2, `8/2/2025`, `pages/skits/skit2.html`);
+addSkit(3, null /* `8/2/2025` */, `pages/skits/skit3.html`);
+addSkit(4, null, `pages/skits/skit4.html`);
+addSkit(5, null, `pages/skits/skit5.html`);
+addSkit(6, null, `pages/skits/skit6.html`);
 
 var list = document.getElementById(`book-list`);
 var otherPages = document.getElementById(`page-list`);
