@@ -26,11 +26,16 @@ var addFanart = function (
 
 fanarts = [];
 addFanart(
-        [`Chibi Boys`, `Gamer Boys`, `Freewill`],
+        [`Chibi Boys`, `Gamer Boys`, `Freewill`, `Muah Muah`],
         `H.R.`,
-        [`fanart/H.R/chibi`, `fanart/H.R/human`, `fanart/H.R/freewill`],
+        [
+                `fanart/H.R/chibi`,
+                `fanart/H.R/human`,
+                `fanart/H.R/freewill`,
+                `fanart/H.R/muahmuah`,
+        ],
         [150],
-        [`8/2/2025`, `8/2/2025`, `8/2/2025`]
+        [`8/2/2025`, `8/2/2025`, `8/2/2025`, `8/3/2025`]
 );
 
 var list = document.getElementById(`fanart-list`);
@@ -66,8 +71,7 @@ for (let fanart of fanarts) {
         var i = 0;
         for (let art in fanart.path) {
                 var artwork = document.createElement(`img`);
-                artwork.src =
-                        `../assets/${fanart.path[i]}.png`;
+                artwork.src = `../assets/${fanart.path[i]}.png`;
                 artwork.width = 300;
 
                 if (fanart.width[i] != null) artwork.width = fanart.width[i];
